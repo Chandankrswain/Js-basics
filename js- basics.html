@@ -7,6 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button onclick="
+    showQuantity = showQuantity + 1;
+    console.log(`Cart Quantity : ${showQuantity}`)
+    ">ADD to cart</button>
+    <button onclick="
+        console.log(`Cart Quantity : ${showQuantity}`)
+    ">Show quantity</button>
+    <button onclick="
+     showQuantity = showQuantity + 2;
+    console.log(`Cart Quantity : ${showQuantity}`)
+    ">+2</button>
+    <button onclick="
+    showQuantity = showQuantity + 3;
+   console.log(`Cart Quantity : ${showQuantity}`)
+   ">+3</button>
+    <button onclick="
+    showQuantity = showQuantity * 0;
+    console.log('cart was reset')
+   console.log(`Cart Quantity : ${showQuantity}`)
+   ">reset</button>
+    <script>
+        let showQuantity = 0;
+    </script>
 </body>
 </html>
