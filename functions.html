@@ -9,21 +9,20 @@
 <body>
     
     <button onclick="
-        computerNumber=random();
         myMove('rock');
     ">Rock</button>
     <button onclick="
-        computerNumber =random();
         myMove('paper');
      ">paper</button>
     <button onclick="
-        const computerNumber=random();
         myMove('scissors');       
     ">scissors</button>
 
     <script>
     
         function myMove(playMove){
+        const computerNumber=random();
+        
 
         if(playMove === 'scissors'){
             if(computerNumber === 'rock'){
