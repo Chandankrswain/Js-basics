@@ -9,59 +9,39 @@
 <body>
     
     <button onclick="
-
         computerNumber=random();
-
-        let finalResult = '';
-        
-        if(computerNumber === 'rock'){
-            finalResult = 'tie';
-        }
-        else if(computerNumber === 'paper'){
-            finalResult = 'lose'
-        }
-        else{
-            finalResult = 'win'
-        }
-
-        console.log(finalResult);
+        myMove('rock');
     ">Rock</button>
     <button onclick="
-
         computerNumber =random();
-
-
-        if(computerNumber === 'rock'){
-            result = 'win';
-        }
-        else if(computerNumber === 'paper'){
-            result = 'tie'
-        }
-        else{
-            result = 'lose'
-        }
-
-        console.log(result);
+        myMove('paper');
      ">paper</button>
     <button onclick="
-
         const computerNumber=random();
-
-        if(computerNumber === 'rock'){
-            result = 'lose';
-        }
-        else if(computerNumber === 'paper'){
-            result = 'win'
-        }
-        else{
-            result = 'tie'
-        }
-
-        console.log(result);
+        myMove('scissors');       
     ">scissors</button>
 
     <script>
     
+        function myMove(playMove){
+            let finalResult = '';
+
+            if(computerNumber === 'rock'){
+            playMove = 'lose';
+        }
+        else if(computerNumber === 'paper'){
+            playMove = 'win'
+        }
+        else{
+            playMove = 'tie'
+        }
+
+        console.log(playMove);
+
+        return playMove;
+
+        }
+
         function random(){   
             const randomNumber = Math.random();                 
             if(randomNumber >= 0 && randomNumber < 1/3){
