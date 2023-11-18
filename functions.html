@@ -24,22 +24,54 @@
     <script>
     
         function myMove(playMove){
-            let finalResult = '';
 
+        if(playMove === 'scissors'){
             if(computerNumber === 'rock'){
-            playMove = 'lose';
-        }
-        else if(computerNumber === 'paper'){
-            playMove = 'win'
-        }
-        else{
-            playMove = 'tie'
+                playMove = 'lose';
+            }
+            else if(computerNumber === 'paper'){
+                playMove = 'win'
+            }
+            else{
+                playMove = 'tie'
+            }
+
+            console.log(playMove);
+
+            return playMove;
         }
 
-        console.log(playMove);
+        else if(playMove === 'rock'){
+            if(computerNumber === 'rock'){
+                playMove = 'tie';
+            }
+            else if(computerNumber === 'paper'){
+                playMove = 'lose'
+            }
+            else{
+                playMove = 'win'
+            }
 
-        return playMove;
+            console.log(playMove);
 
+            return playMove;
+        }
+
+        else if(playMove === 'paper'){
+            if(computerNumber === 'rock'){
+                playMove = 'win';
+            }
+            else if(computerNumber === 'paper'){
+                playMove = 'tie'
+            }
+            else{
+                playMove = 'lose'
+            }
+
+            console.log(playMove);
+
+            return playMove;
+        }
         }
 
         function random(){   
